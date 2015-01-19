@@ -1,0 +1,101 @@
+<div class="page-header">
+  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+</div>
+
+<div class="row post-full">
+  <div class="col-xs-12">
+  	{% unless page.category == "project" %}
+	    <div class="date">
+	      <span>{{ page.date | date_to_long_string }}</span>
+	    </div>
+	{% endunless %}
+    {% unless page.images == empty %}
+    	{% for img in page.images %}
+    		<div class="post-image">
+    			<img src="/assets/derivatives/220x220/{{ img }}" />
+    		</div>
+    	{% endfor %}
+    	<div class="clearfix"></div>
+    {% endunless %}
+    <div class="content">
+      {{ content }}
+    </div>
+
+  {% unless page.project == null | page.project == empty %}
+  	<div class="row">
+	  	<div class="tag_vocabulary col-xs-2">Project:</div>
+	    <ul class="tag_box inline col-xs-10">
+	      <li><i class="glyphicon-tags"></i></li>
+	      {% for p in page.project %}
+	      	{% for test in site.posts %}{% if test.url == p %}<li><a href="{{ p }}">{{ test.title }}</a></li>{% endif %}{% endfor %}
+	      {% endfor %}
+	    </ul>
+	</div>
+  {% endunless %}  
+
+  {% unless page.tags == empty %}
+  	<div class="row">
+	  	<div class="tag_vocabulary col-xs-2">Technologies:</div>
+	    <ul class="tag_box inline col-xs-10">
+	      <li><i class="glyphicon-tags"></i></li>
+	      {% assign tags_list = page.tags %}
+	      {% assign site.JB.tags_path = "/technology" %}
+	      {% include JB/tags_list %}
+	    </ul>
+	</div>
+  {% endunless %}  
+
+  {% unless page.team == null | page.team == empty %}
+  	<div class="row">
+	  	<div class="tag_vocabulary col-xs-2">Team:</div>
+	    <ul class="tag_box inline col-xs-10">
+	      <li><i class="glyphicon-tags"></i></li>
+	      {% for t in page.team %}
+	      <li><a href="#" onclick="return false" rel="nofollow">{{ t }}</a></li>
+	      {% endfor %}
+	    </ul>
+	</div>
+  {% endunless %}  
+
+  {% unless page.position == null | page.position == empty %}
+  	<div class="row">
+	  	<div class="tag_vocabulary col-xs-2">Position:</div>
+	    <ul class="tag_box inline col-xs-10">
+	      <li><i class="glyphicon-tags"></i></li>
+	      {% for t in page.position %}
+	      <li><a href="#" onclick="return false" rel="nofollow">{{ t }}</a></li>
+	      {% endfor %}
+	    </ul>
+	</div>
+  {% endunless %}  
+
+  {% unless page.references == null | page.references == empty %}
+  	<div class="row">
+	  	<div class="tag_vocabulary col-xs-2">References:</div>
+	    <ul class="tag_box inline col-xs-10">
+	      <li><i class="glyphicon-tags"></i></li>
+	      {% for r in page.references %}
+	      	<li><a href="{{ r['link'] }}" rel="nofollow">{{ r['title'] }}</a></li>
+	      {% endfor %}
+	    </ul>
+	</div>
+  {% endunless %}  
+  
+    <hr>
+    <ul class="pagination">
+    {% if page.previous %}
+      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
+    {% else %}
+      <li class="prev disabled"><a>&larr; Previous</a></li>
+    {% endif %}
+      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+    {% if page.next %}
+      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
+    {% else %}
+      <li class="next disabled"><a>Next &rarr;</a>
+    {% endif %}
+    </ul>
+    <hr>
+    {% include JB/comments %}
+  </div>
+</div>

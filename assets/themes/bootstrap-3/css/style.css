@@ -1,0 +1,120 @@
+/* Custom container */
+
+/* Replaced with normal container and standard footer */
+/*.container-narrow {
+  margin: 0 auto;
+  max-width: 700px; }
+
+.container-narrow > hr {
+  margin: 30px 0; }
+*/
+
+/* Replaced with standard BS3 Navbar */
+/*.navbar .nav {
+  float: right; }*/
+.navbar-default {
+  background-image: linear-gradient(to bottom,#999 0,#666 100%);
+}
+.navbar-default .navbar-brand {
+  background: transparent url(/assets/witti/wit09_150x54.png) center no-repeat;
+  height: 67px;
+  width: 162px;
+  text-indent: -1000px;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+  line-height: 37px;
+}
+
+.syntaxhighlighter {
+	margin: 1em 0;
+}
+.syntaxhighlighter div.toolbar {
+	display: none;
+}
+.syntaxhighlighter code {
+	background: none;
+	border: none;
+	padding: 0;
+}
+.syntaxhighlighter table td.gutter .line {
+	text-align: right !important;
+	padding: 0 0.5em 0 1em !important;
+}
+
+/* Jekyll Bootstrap Colors */
+h1, h2, h3, h4 {
+  color: #666;
+}
+#footer {
+  background-color: #666;
+}
+
+
+
+/* posts index */
+.post > h3.title {
+  position: relative;
+  padding-top: 10px; }
+
+.post > h3.title span.date {
+  position: absolute;
+  right: 0;
+  font-size: 0.9em; }
+
+.post > .more {
+  margin: 10px 0;
+  text-align: left; }
+
+/* post-full*/
+.post-full .date {
+  margin-bottom: 20px;
+  font-weight: bold; }
+  
+.post-full div.post-image {
+  width: 226px;
+  height: 226px;
+  padding: 2px;
+  border: 1px solid #ccc;
+  float: left;
+}
+
+/* tag_box */
+.tag_vocabulary {
+  float: left;
+  margin-top: 4px;
+}
+.tag_box {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; }
+
+.tag_box li {
+  line-height: 28px; }
+
+.tag_box li i {
+  opacity: 0.9; }
+
+.tag_box.inline li {
+  float: left; }
+
+.tag_box a {
+  padding: 3px 6px;
+  margin: 2px;
+  background: #eee;
+  color: #555;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1px dashed #ccc; }
+
+.tag_box a span {
+  vertical-align: super;
+  font-size: 0.8em; }
+
+.tag_box a:hover {
+  background-color: #e5e5e5; }
+
+.tag_box a.active {
+  background: #57A957;
+  border: 1px solid #4c964d;
+  color: #FFF; }
