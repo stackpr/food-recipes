@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Recent Posts
-tagline: another tech blog
+tagline: vegetarian healthy living
 ---
 {% include JB/setup %}
 
