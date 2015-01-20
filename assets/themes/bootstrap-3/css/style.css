@@ -15,7 +15,7 @@
 .navbar-default {
   background-image: linear-gradient(to bottom,#999 0,#666 100%);
 }
-.navbar-default .navbar-brand {
+#wrap .navbar-default .navbar-brand {
 	color:#fff;
 	font-size:200%;
 }
