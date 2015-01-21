@@ -15,6 +15,8 @@ ingredients:
 yield: 18 Cookies
 prep_time: 10
 cook_time: 20
+tags:
+- breakfast
 
 ---
 {% include JB/setup %}
