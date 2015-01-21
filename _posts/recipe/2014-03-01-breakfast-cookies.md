@@ -19,4 +19,6 @@ cook_time: 20
 ---
 {% include JB/setup %}
 
-    Instructions:&nbsp;<p>Mash and mix everything together. Bake at 350 for 20 minutes.</p>
+## Instructions
+
+Mash and mix everything together. Bake at 350 for 20 minutes.
