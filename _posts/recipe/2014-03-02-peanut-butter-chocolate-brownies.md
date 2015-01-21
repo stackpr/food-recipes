@@ -1,6 +1,6 @@
 ---
 title: Peanut Butter Chocolate Brownies
-description: "Chocolate and PB brownies. Enough said.\n\_"
+description: Chocolate and PB brownies. Enough said.
 layout: post
 category: recipe
 permalink: /recipe/peanut-butter-chocolate-brownies
@@ -18,6 +18,8 @@ ingredients:
 yield: 16 Brownies
 prep_time: 10
 cook_time: 35
+tags:
+- dessert
 
 ---
 {% include JB/setup %}
