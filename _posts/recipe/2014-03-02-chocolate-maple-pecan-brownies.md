@@ -20,6 +20,8 @@ source:
 - This is based loosely on the <a href="http://www.delish.com/recipefinder/healthy-makeover-brownies-recipe">healthy makeover brownies</a>.
 prep_time: 10
 cook_time: 25
+tags:
+- dessert
 
 ---
 {% include JB/setup %}
