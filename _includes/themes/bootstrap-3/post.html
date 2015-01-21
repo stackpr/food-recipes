@@ -34,11 +34,13 @@
   {% unless page.ingredients == null | page.ingredients == empty %}
     <div class="content">
 	  	<div class="row">
-		  	<h2>Ingredients</h2>
-		  	<ul>
-		  		{% for i in page.ingredients %}
-		  		<li>{{ i }}</li>{% endfor %}
-		  	</ul>
+	  		<div class="col-xs-12">
+			  	<h2>Ingredients</h2>
+			  	<ul>
+			  		{% for i in page.ingredients %}
+			  		<li>{{ i }}</li>{% endfor %}
+			  	</ul>
+	  		</div>
 		</div>
 	</div>
   {% endunless %}  
@@ -123,6 +125,8 @@
     {% endif %}
     </ul>
     <hr>
-    {% include JB/comments %}
+    <div class="hidden-print">
+	    {% include JB/comments %}
+    </div>
   </div>
 </div>
