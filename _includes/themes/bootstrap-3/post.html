@@ -20,24 +20,13 @@
 
 	{% if page.yield %}
     <div class="content">
-		<div class="row">
-			<div class="col-xs-5">Yield:</div>
-			<div class="col-xs-7">{{ page.yield }}</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-5">Prep Time:</div>
-			<div class="col-xs-7">{{ page.prep_time }}</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-5">Cook Time:</div>
-			<div class="col-xs-7">{{ page.cook_time }}</div>
-		</div>
-		
-		<dl>
+		<dl class="dl-horizontal">
 			<dt>Yield:</dt>
 			<dd>{{ page.yield }}</dd>
 			<dt>Prep Time:</dt>
 			<dd>{{ page.prep_time }}</dd>
+			<dt>Cook Time:</dt>
+			<dd>{{ page.cook_time }}</dd>
 		</dl>
 	</div>
 	{% endif %}
@@ -48,8 +37,7 @@
 		  	<h2>Ingredients</h2>
 		  	<ul>
 		  		{% for i in page.ingredients %}
-		  			<li>{{ i }}</li>
-		  		{% endfor %}
+		  		<li>{{ i }}</li>{% endfor %}
 		  	</ul>
 		</div>
 	</div>
