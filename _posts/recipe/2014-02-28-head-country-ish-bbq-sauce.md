@@ -17,12 +17,13 @@ ingredients:
 - 1t Black Pepper
 yield: 4 Cups
 source:
-- |
-  <p><a href="http://www.simplyscratch.com/2011/09/homemade-barbecue-sauce-part-1.html">Scratch option close to Head Country.</a></p>
+- <a href="http://www.simplyscratch.com/2011/09/homemade-barbecue-sauce-part-1.html">Scratch option close to Head Country.</a>
 prep_time: 0
 cook_time: 0
 
 ---
 {% include JB/setup %}
 
-    Instructions:&nbsp;<p>Mix everything together. Use a wisk.</p>
+## Instructions
+
+Mix everything together. Use a wisk.
