@@ -5,10 +5,11 @@ tagline: vegetarian healthy living
 ---
 {% include JB/setup %}
 
+{% assign sorted_pages = (site.pages | sort: 'title') %}
 <ul class="posts">
-  {% for post in site.posts limit:20 %}
+  {% for post in sorted_pages %}
   	{% unless site.JB.hide_categories contains post.category %}
-  	  <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  	  <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   	{% endunless %}
   {% endfor %}
 </ul>
