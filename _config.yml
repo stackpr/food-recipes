@@ -92,8 +92,8 @@ JB :
   #
   comments :
     provider : disqus
-#    disqus :
-#      short_name : foodpr
+    disqus :
+      short_name : vegetarians
 #    livefyre :
 #      site_id : 123
 #    intensedebate :
