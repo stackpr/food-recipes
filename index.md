@@ -1,15 +1,4 @@
 ---
-layout: page
-title: Recent Posts
-tagline: vegetarian healthy living
+title: Our Family Recipes
+redirect_to: "https://docs.google.com/document/d/1SpbY1h0cu3x_E_IsbGXQoUOEvi98KtVPsJFlhdfgkoQ/edit?usp=sharing"
 ---
-{% include JB/setup %}
-
-{% assign sorted_posts = (site.posts | sort: 'title') %}
-<ul class="posts">
-  {% for post in sorted_posts %}
-  	{% unless site.JB.hide_categories contains post.category %}
-  	  <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  	{% endunless %}
-  {% endfor %}
-</ul>
